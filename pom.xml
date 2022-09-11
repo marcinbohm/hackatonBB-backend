@@ -14,13 +14,13 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 
-		<postgresql.version>42.2.5</postgresql.version>
+		<postgresql.version>42.5.0</postgresql.version>
 		<commons-codec.version>1.13</commons-codec.version>
+		<kotlin.version>1.3.10</kotlin.version>
 		<commons.text.version>1.3</commons.text.version>
 		<jjwt.version>0.9.1</jjwt.version>
 		<commons.text.version>1.3</commons.text.version>
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
-		<atdm-PZClients.version>1.2.3</atdm-PZClients.version>
 		<jsoup.version>1.11.3</jsoup.version>
 
 		<graphql-java-tools.version>5.6.1</graphql-java-tools.version>
@@ -42,9 +42,26 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.6.10.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-jpamodelgen</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.2.0.Final</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.hibernate.validator</groupId>
 			<artifactId>hibernate-validator</artifactId>
-			<version>6.1.0.Final</version>
+			<version>7.0.5.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -112,6 +129,7 @@
 			<artifactId>graphql-spring-boot-starter</artifactId>
 			<version>${graphql-java.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>com.graphql-java-kickstart</groupId>
 			<artifactId>graphql-java-tools</artifactId>
@@ -123,11 +141,19 @@
 			<artifactId>graphql-datetime-spring-boot-starter</artifactId>
 			<version>${graphql-java-datetime.version}</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>${jsoup.version}</version>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons-codec.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>${commons.text.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
